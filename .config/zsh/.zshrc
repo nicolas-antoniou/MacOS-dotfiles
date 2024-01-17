@@ -84,6 +84,10 @@ vif() {
     nvim "$fname"
 }
 
+idrive() {
+	cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/
+}
+
 yt () {
     yt-dlp -o ~/Videos/%(title)s.%(ext)s -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" $1
 }
@@ -130,7 +134,7 @@ bindkey '^e' edit-command-line
 zle -N autosuggest-accept
 #user defined keybinds
 bindkey -s '^o' 'rcd\n'
-bindkey '^ ' autosuggest-accept
+bindkey '`' autosuggest-accept
 bindkey -s '^f' 'cdf^M'
 bindkey -s '^n' 'vif^M'
 bindkey '^[[P' delete-char
